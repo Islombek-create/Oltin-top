@@ -56,9 +56,9 @@ const questions = [
         correct: 0
     },
      {
-        question: "Oltin top qaysi yili topshirilmagan?",
-        options: ["2020", "2022", "2019", "2021"],
-        correct: 0
+        question: " XXI asrda «Oltin to‘p» (Ballon d'Or) sovrinini Angliya Premyer-ligasi (APL) klubi safida o‘ynab turib yutgan so‘nggi futbolchi kim?",
+        options: ["Krishtianu Ronaldu ", " Erling Xoland ", "Muhammad Saloh ", "Rodri "],
+        correct: 3
     },
      {
         question: "Quyidagi  futbolchilardan qaysi biri faoliyati davomida biror marta ham rasmiy «Oltin top»ни yutmagan?",
@@ -87,8 +87,8 @@ const questions = [
     },
      {
         question: " XXI asrda «Oltin top» (Ballon d'Or) uchun yakuniy ovoz berish natijalariga kora, kuchli uchlikka (Top-3) kira olgan yagona osiyolik (Osiyo qit'asi vakili) futbolchi kim?",
-        options: ["Son Heung-min", "Keisuke Honda", "Xech kim", "Park Ji-sung"],
-        correct: 3
+        options: ["Son Heung-min", "Keisuke Honda", "Hech kim", "Park Ji-sung"],
+        correct: 2
     },
 ];
 
