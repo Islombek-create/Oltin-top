@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+ <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ballondor Winners</title>
+        </head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0;
+            }
+            nav {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 0;
+            }
+            .container-1 {
+                max-width: 1200px;
+              
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+           ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+            }
+             span {
+                font-size: 24px;
+                font-weight: bold;
+            }
+             li {
+                margin: 0 15px;
+                list-style: none;
+            }
+            a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 18px;
+            }
+            .container {width:100%;
+                height: 600px;
+                color: #fff;
+         background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnJ6zm5ynmTDM4IDF59GFxUq2TqrlWqU8ZT9u3sB_4UA&s=10');
+                background-size: cover;
+              background-position: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+            .container p {
+                font-size: 18px;
+                max-width: 600px;
+            }
+            .winners-section {
+    padding: 40px 20px;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+}
+
+.search-box {
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 80%;
+    max-width: 500px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 2px solid #d4af37; /* Tillarang bordur */
+    outline: none;
+    background: #222;
+    color: white;
+}
+
+.winners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.player-card {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 15px;
+    transition: transform 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.player-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.player-card h3 {
+    margin: 10px 0 5px;
+    color: #fff;
+}
+
+.player-card .trophy {
+    color: #d4af37;
+    font-weight: bold;
+}
+footer {
+    background-color: #333; }
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-content ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    .footer-content ul li {
+        margin-right: 20px;
+    }
+    .footer-content a {
+        color: #fff;
+        text-decoration: none;
+    }
+    /* Viktorina dizayni */
+.quiz-section {
+    padding: 40px 20px;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #242424;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #d4af37; /* Tillarang ramka */
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+}
+
+#question-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.option-btn {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option-btn:hover {
+    background: #444;
+    border-color: #d4af37;
+}
+
+/* Javob tanlangandagi ranglar */
+.option-btn.correct {
+    background-color: #2e7d32 !important; /* Yashil - To'g'ri */
+    border-color: #4caf50;
+}
+
+.option-btn.wrong {
+    background-color: #c62828 !important; /* Qizil - Noto'g'ri */
+    border-color: #ef5350;
+}
+
+.next-btn, .restart-btn {
+    background: #d4af37;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    padding: 10px 25px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.next-btn:hover, .restart-btn:hover {
+    background: #f3c63f;
+}
+        </style>
+    <body>
+        <nav>
+            <div class="container-1">
+                <span style="font-size: 24px; font-weight: bold;">Oltin top g'oliblari</span>
+                <ul>
+                    <li><a href="#container" >Bosh sahifa</a></li>
+                    <li><a href="#goliblar">G'oliblar</a></li>
+                    <li><a href="#quiz">Qiziqarli oyin</a></li>
+                </ul>
+            </div>
+        </nav>
+       <header>
+        <div class="container">
+        <h1>Oltin top  g'oliblari</h1>
+        <p>Oltin top bu futbolda yilning eng yaxshi futbolchisiga beriladigan sovrindir.U birinchi marta 1956-yilda berilgan va osha yili bu sovrinni  Sir Stanley Matthews olgan.Oxirgi marta bu sovrinni 2026-yilda Harry Kane qo'lga kiritdi.</p>
+        </div>
+       </header>
+<!-- G'oliblar va Qidiruv bo'limi -->
+<section id="goliblar" class="winners-section">
+    <h2 class="section-title">Oltin To'p G'olislari Ro'yxati</h2>
+
+    <!-- Qidiruv inputi -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Futbolchi nomini yozing (masalan: Messi)...">
+    </div>
+
+    <!-- Futbolchilar Grid kartochkalari -->
+    <div class="winners-grid" id="winnersContainer">
+        
+        <div class="player-card" data-name="Lionel Messi">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmhUfNt3RQ3Wc6HOfZ0A2-qF6ujClESClOU_gj_nKQDg&s" alt="Messi">
+            <h3>Lionel Messi</h3>
+            <p class="trophy">🏆 8 ta Oltin to'p</p>
+            <p class="years">2009, 2010, 2011, 2012, 2015, 2019, 2021, 2023</p>
+        </div>
+
+        <div class="player-card" data-name="Cristiano Ronaldo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS48oR-B4LWtvd8zGncdx4DWOMmLgxnB7ijrX0WbvZoGQ&s=10" alt="Ronaldo">
+            <h3>Cristiano Ronaldo</h3>
+            <p class="trophy">🏆 5 ta Oltin to'p</p>
+            <p class="years">2008, 2013, 2014, 2016, 2017</p>
+        </div>
+
+        <div class="player-card" data-name="johan cruyff">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrM2jvs5Ic38u-AlbkNh0PaoI5Z7fHWedBESq9SFaB0Q&s=10" alt="Cruyff">
+            <h3>johan cruyff</h3>
+            <p class="trophy">🏆 3 ta Oltin to'p</p>
+            <p class="years">1971,1973,1974</p>
+        </div>
+
+        <div class="player-card" data-name="Marco van Basten">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpfBcJmJ1lGpbNbKTJjHipg82WlI_3gP-YA1XXSX1IzA&s=10" alt="Van Basten">
+            <h3>Marco van Basten</h3>
+            <p class="trophy">🏆 3 ta Oltin to'p</p>
+            <p class="years">1988,1989,1992</p>
+        </div>
+
+         <div class="player-card" data-name="Ronaldo Nazario">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm6x0mXZf0JwWLkK58RHosSdiv0s7YexXpF3A-fNmqaA&s=10" alt="Nazario">
+            <h3>Ronaldo Nazario</h3>
+            <p class="trophy">🏆 2 ta Oltin to'p</p>
+            <p class="years">1997,2002</p>
+        </div>
+
+         <div class="player-card" data-name="Andriy Shevchenko">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXzKDXKBx8T5pFrrWuZ6Da9Oq1PzkwpvcamerR9Helmw&s=10" alt="Shevchenko">
+            <h3>Andriy Shevchenko</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">2004</p>
+        </div>
+
+         <div class="player-card" data-name="Zinedine Zidane">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKIUnBuPxWHY9cypSwseoGnHxKL9ltZhaPgseLb9EaEA&s=10" alt="Zidane">
+            <h3>Zinedine Zidane</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">1998</p>
+        </div>
+
+         <div class="player-card" data-name="Ricardo Kaka">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw2Y5hltYyRxn6CIVed3UynaRKoPTS_xDFrzndvyOmiA&s=10" alt="Ricardo Kaka">
+            <h3>Ricardo Kaka</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">2007</p>
+        </div>
+
+         <div class="player-card" data-name="Roberto Baggio">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ01npw94hsK8vFpMPB4dFI2USp6v-rBdLpiatsBgjrHA&s=10" alt="Baggio">
+            <h3>Roberto Baggio</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">1993</p>
+        </div>
+
+         <div class="player-card" data-name="Ronaldinho">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBooChjhZG1VZZrqMR4vCVWjza6nYGc4W9UYdnM_ANxA&s=10" alt="Ronaldinho">
+            <h3>Ronaldinho</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">2005</p>
+        </div>
+
+         <div class="player-card" data-name="pavel nedved">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjhr5QKgIgi_ORTrZCMOrEtlZ3LZSbiqJOAlHVmUed_g&s=10" alt="Nedved">
+            <h3>Pavel Nedved</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">2003</p>
+        </div>
+
+         <div class="player-card" data-name="Luis Figo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNClBdiS29fgg6MBuDURP1W4zbj8SdQNxKbEHheBFvxA&s=10" alt="Figo">
+            <h3>Luis Figo</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">2000</p>
+        </div>
+        
+         <div class="player-card" data-name="Michael Owen">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK7u3BTjn3lTt54kA2FCLxmuA3LT2MaMziBgYc6SVNxg&s=10" alt="Owen">
+            <h3>Michael Owen</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">2001</p>
+        </div>
+        
+         <div class="player-card" data-name="Luka modric">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSeMjERy-euXzYNLEP4IzdFEszlKnxbPgebY8fBFVqcQ&s=10" alt="modric">
+            <h3>luka modric</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">2018</p>
+        </div>
+        <div class="player-card" data-name="Fabio Cannavaro">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSifBd_i-RxSRW3kAwp1lC-gy420O3x4lNefOyIVgCFcA&s=10" alt="Cannavaro">
+            <h3>Fabio Cannavaro</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">2006</p>
+        </div>
+        
+<div class="player-card" data-name="Karim Benzema">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-kQ-6CVzWSlzg-BKcyyzKJ4YUL4gwC5UEHOW4EO1o1g&s=10" alt="Benzema">
+            <h3>Karim Benzema</h3>
+            <p class="trophy">🏆 1 ta Oltin to'p</p>
+            <p class="years">2006</p>
+        </div>
+
+    </div>
+    <!-- Viktorina bo'limi -->
+<section id="quiz" class="quiz-section">
+    <h2>🏆 Oltin To'p Viktorinasi</h2>
+    <p>Futbol bo'yicha bilimingizni sinab ko'ring!</p>
+
+    <div class="quiz-container">
+        <!-- Savol va javoblar qutisi -->
+        <div id="quiz-box">
+            <h3 id="question-text">Savol yuklanmoqda...</h3>
+            <div id="options-container" class="options-grid">
+                <!-- Variantlar JS orqali chiqadi -->
+            </div>
+            <button id="next-btn" class="next-btn" style="display: none;">Keyingi savol ➔</button>
+        </div>
+
+        <!-- Natija qutisi -->
+        <div id="result-box" style="display: none;">
+            <h3>O'yin tugadi! 🎉</h3>
+            <p id="score-text"></p>
+            <button onclick="restartQuiz()" class="restart-btn">Qayta o'ynash 🔄</button>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+    </body>
+</html>
+
