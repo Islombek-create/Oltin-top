@@ -34,7 +34,62 @@ const questions = [
         question: "1997 va 2002-yillarda Oltin to'pni olgan braziliyalik afsona kim?",
         options: ["Rivaldo", "Ronaldinho", "Kaka", "Ronaldo Nazario"],
         correct: 3
-    }
+    },
+    {
+        question: "Messi va Ronaldo davri boshlanishidan oldin oxirgi marta kim Oltin to'pni qo'lga kiritgan?",
+        options: ["Luka Modrić", "Zinedine Zidane", "Kaka", "Fabio Cannavaro"],
+        correct: 2
+    },
+    {
+        question: "Qaysi yagona darvozabon oltin topni qolga kritigan?",
+        options: ["Iker Cassilas", "Lev Yashin", "Gianluigi Buffon", "Tibo Courtois"],
+        correct: 1
+    },
+    {
+        question: "Ronaldo va messi davrida oltin topni qolga kiritgan oyinchi kim?(2008-2020 oralgigida)",
+        options: ["Luka Modrić", "Karim Benzema", "Neymar júnior", "kylian Mbappé"],
+        correct: 0
+    },
+     {
+        question: "Oltin top qaysi yili topshirilmagan?",
+        options: ["2020", "2022", "2019", "2021"],
+        correct: 0
+    },
+     {
+        question: "Oltin top qaysi yili topshirilmagan?",
+        options: ["2020", "2022", "2019", "2021"],
+        correct: 0
+    },
+     {
+        question: "Quyidagi  futbolchilardan qaysi biri faoliyati davomida biror marta ham rasmiy «Oltin top»ни yutmagan?",
+        options: ["Ronaldinho", "Andrea Pirlo", "Ousmane Dembélé", "Zinedine Zidane"],
+        correct: 1
+    },
+     {
+        question: " «Oltin top» tarixidagi   mutloq ustunlik bilan yutgan hujumchi kim edi??",
+        options: ["Cristiano Ronaldo", "Karim Benzema", "Lewandowski", "Harry Kane"],
+        correct: 1
+    },
+     {
+        question: " Cristiano Ronaldo ozining ilk «Oltin top» sovrinini qaysi klubda oynab yurganida qolga kiritgan",
+        options: ["Manchester United", "Real Madrid", "Juventus", "PSG"],
+        correct: 0
+    },
+     {
+        question: " Tarixda «Oltin top»ни yutgan yagona afrikalik futbolchi kim?",
+        options: ["Sadio Mané", "Mohamed Salah", "George Weah", "Dider Drogba"],
+        correct: 2
+    },
+     {
+        question: "qaysi klub vakillari eng kop oltin topni qola kiritishgan",
+        options: ["Bayern Munich", "Real Madrid", "Juventus", "Milan"],
+        correct: 1
+    },
+     {
+        question: " XXI asrda «Oltin top» (Ballon d'Or) uchun yakuniy ovoz berish natijalariga kora, kuchli uchlikka (Top-3) kira olgan yagona osiyolik (Osiyo qit'asi vakili) futbolchi kim?",
+        options: ["Son Heung-min", "Keisuke Honda", "Xech kim", "Park Ji-sung"],
+        correct: 3
+    },
 ];
 
 let currentQuestionIndex = 0;
